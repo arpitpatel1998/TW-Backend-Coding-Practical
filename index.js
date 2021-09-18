@@ -1,7 +1,7 @@
-import dotenv from 'dotenv'
-import { startServer } from './src/app.js';
+import dotenv from 'dotenv';
+import {startServer} from './src/app.js';
 
 (async () => {
-  dotenv.config()
+  dotenv.config();
   await startServer();
 })();

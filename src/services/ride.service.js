@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Ride } from '../models/index.js';
+import {Ride} from '../models/index.js';
 
 /**
  * Function is used to get the ride list from db
@@ -10,11 +10,11 @@ import { Ride } from '../models/index.js';
 export const rideList = async (limit, page) => {
   const skip = limit == 0 ? limit : page == 1 ? 0 : page * limit;
   const skipLimitCond = [{
-    '$skip': Number(skip)
-  }]
+    '$skip': Number(skip),
+  }];
   if (limit != 0) {
     skipLimitCond.push({
-      '$limit': Number(limit)
+      '$limit': Number(limit),
     });
   }
   const list = await Ride.aggregate([
@@ -23,11 +23,11 @@ export const rideList = async (limit, page) => {
         'rideList': [...skipLimitCond],
         'totalRides': [
           {
-            '$count': 'count'
-          }
-        ]
-      }
-    }
+            '$count': 'count',
+          },
+        ],
+      },
+    },
   ]);
   return list;
 };
@@ -48,9 +48,9 @@ export const saveRide = async (rideData) => {
  * @return {JSON} Ride Details
  */
 export const rideDetails = async (rideId) => {
-  const details = await Ride.findOne({ _id: mongoose.Types.ObjectId(rideId) });
+  const details = await Ride.findOne({_id: mongoose.Types.ObjectId(rideId)});
   return details;
-}
+};
 
 /**
  * Function is used to update the ride in db
@@ -58,34 +58,34 @@ export const rideDetails = async (rideId) => {
  * @param {JSON} rideData json data
  * @return {JSON} Ride Details
  */
-export const updateRide = async (rideId, { start, end, driver, customers }) => {
+export const updateRide = async (rideId, {start, end, driver, customers}) => {
   try {
     const data = await Ride.findByIdAndUpdate(
-      rideId,
-      {
-        $set: {
-          ...(start && {
-            start,
-          }),
-          ...(end && {
-            end,
-          }),
-          ...(driver && {
-            driver,
-          }),
+        rideId,
+        {
+          $set: {
+            ...(start && {
+              start,
+            }),
+            ...(end && {
+              end,
+            }),
+            ...(driver && {
+              driver,
+            }),
+          },
+          $push: {
+            ...(customers && {
+              customers,
+            }),
+          },
         },
-        $push: {
-          ...(customers && {
-            customers,
-          })
-        }
-      },
-      {
-        new: true,
-      },
+        {
+          new: true,
+        },
     );
     return data;
   } catch (error) {
     throw error;
   }
-}
+};
