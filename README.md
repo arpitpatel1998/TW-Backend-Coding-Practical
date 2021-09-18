@@ -25,8 +25,8 @@ Find the postman collection here: https://bold-trinity-837383.postman.co/workspa
 - [x] TASK-005 - Get Rides
 - [x] TASK-006 - Add Create/Update Ride routes
 - [x] TASK-007 - Refactor
-- [ ] TASK-008 - Add linting (Bonus)
-- [ ] TASK-009 - Add cleanup cron job (Bonus)
+- [x] TASK-008 - Add linting (Bonus)
+- [x] TASK-009 - Add cleanup cron job (Bonus)
 
 ## Task Description
 
