@@ -17,7 +17,6 @@ export async function startServer() {
 
   app.listen(PORT, async () => {
     console.log(`Listening on port ${PORT}`);
-
     return Promise.resolve();
   });
 }
