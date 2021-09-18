@@ -19,7 +19,7 @@ Find the postman collection here: // TODO Publish collection and paste link here
 ## Tasks
 
 - [x] TASK-001 - Fix GET `/health` endpoint
-- [ ] TASK-002 - Connect to MongoDB via Mongoose
+- [x] TASK-002 - Connect to MongoDB via Mongoose
 - [ ] TASK-003 - Move PORT to environment file
 - [ ] TASK-004 - Define rides model
 - [ ] TASK-005 - Get Rides
