@@ -22,9 +22,9 @@ Find the postman collection here: // TODO Publish collection and paste link here
 - [x] TASK-002 - Connect to MongoDB via Mongoose
 - [x] TASK-003 - Move PORT to environment file
 - [x] TASK-004 - Define rides model
-- [ ] TASK-005 - Get Rides
-- [ ] TASK-006 - Add Create/Update Ride routes
-- [ ] TASK-007 - Refactor
+- [x] TASK-005 - Get Rides
+- [x] TASK-006 - Add Create/Update Ride routes
+- [x] TASK-007 - Refactor
 - [ ] TASK-008 - Add linting (Bonus)
 - [ ] TASK-009 - Add cleanup cron job (Bonus)
 
