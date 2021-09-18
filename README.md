@@ -4,7 +4,7 @@ The goal of this practical is to assess your proficiency in software engineering
 
 ## Documentation
 
-Find the postman collection here: // TODO Publish collection and paste link here
+Find the postman collection here: https://bold-trinity-837383.postman.co/workspace/My-Workspace~75db543f-995b-4501-86a2-36fc9c439e60/documentation/14063436-de5901f1-e095-4a60-b23d-9ba9fb114309
 
 ## Guide
 
