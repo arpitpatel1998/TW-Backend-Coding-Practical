@@ -2,11 +2,11 @@ import express from 'express';
 import { connectToDatabase } from './helpers/connectToDatabase.helper.js';
 
 // TASK-003 Move PORT to environment file
-const PORT = 54321;
 
 export const app = express();
 
 export async function startServer() {
+  const PORT = process.env.PORT;
   await connectToDatabase();
 
   app.get('/health', (req, res) => {
