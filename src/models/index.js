@@ -1,1 +1,1 @@
-export { Ride } from './rides.model.js';
+export {Ride} from './rides.model.js';

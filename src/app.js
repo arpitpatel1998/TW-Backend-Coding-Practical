@@ -1,5 +1,6 @@
+/* eslint-disable require-jsdoc */
 import express from 'express';
-import { connectToDatabase } from './helpers/connectToDatabase.helper.js';
+import {connectToDatabase} from './helpers/connectToDatabase.helper.js';
 import rideRouter from './routes/index.js';
 import bodyParser from 'body-parser';
 
@@ -12,7 +13,6 @@ export async function startServer() {
   app.use('/ride', rideRouter);
   app.get('/health', (req, res) => {
     console.log('GET /health');
-    // TASK-001 Fix health route. The above console is printing but the response is not sent to client.
     return res.status(200).send();
   });
   app.listen(PORT, async () => {

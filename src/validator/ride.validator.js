@@ -19,7 +19,7 @@ export const requestRideList = async (data) => {
     message = message.replace(/"/g, '');
     error = true;
   }
-  return { error, message };
+  return {error, message};
 };
 
 /**
@@ -31,11 +31,11 @@ export const createRideRequest = async (data) => {
   const Schema = Joi.object({
     start: Joi.object().keys({
       lat: Joi.number().required(),
-      long: Joi.number().required()
+      long: Joi.number().required(),
     }).required(),
     end: Joi.object().keys({
       lat: Joi.number().required(),
-      long: Joi.number().required()
+      long: Joi.number().required(),
     }).required(),
     driver: Joi.object().keys({
       name: Joi.string().required(),
@@ -59,8 +59,8 @@ export const createRideRequest = async (data) => {
     message = message.replace(/"/g, '');
     error = true;
   }
-  return { error, message };
-}
+  return {error, message};
+};
 
 /**
  * Function for validating request for ride Id
@@ -80,5 +80,5 @@ export const getRideDetailsRequest = async (data) => {
     message = message.replace(/"/g, '');
     error = true;
   }
-  return { error, message };
-}
+  return {error, message};
+};

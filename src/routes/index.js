@@ -1,5 +1,9 @@
-import { Router } from 'express';
-import {getRidesList, getRideDetails, createRide, updateRideData} from '../controller/ride.controller.js';
+import {Router} from 'express';
+import {
+  getRidesList,
+  getRideDetails,
+  createRide, updateRideData,
+} from '../controller/ride.controller.js';
 const router = new Router();
 
 
