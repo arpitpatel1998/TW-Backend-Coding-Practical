@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import {getRidesList} from '../controller/ride.controller.js';
+import {getRidesList, getRideDetails, createRide, updateRideData} from '../controller/ride.controller.js';
 const router = new Router();
 
-// TASK-005 - Get Rides
+
 router.get('/list', getRidesList);
-// TASK-006 - Add Create/Update Ride routes
+router.get('/:rideId', getRideDetails);
+router.post('/', createRide);
+router.put('/:rideId', updateRideData);
 export default router;
