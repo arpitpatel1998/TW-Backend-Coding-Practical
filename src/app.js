@@ -2,7 +2,7 @@ import express from 'express';
 import { connectToDatabase } from './helpers/connectToDatabase.helper.js';
 
 // TASK-003 Move PORT to environment file
-const PORT = process.env.PORT;
+const PORT = 54321;
 
 export const app = express();
 
