@@ -4,7 +4,13 @@
   "description": "The goal of these exercises are to assess your proficiency in software engineering that is related to the daily work that we do at Thinkwik.",
   "main": "index.js",
   "scripts": {
+    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix",
     "start": "node ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretest"
+    }
   },
   "author": "Thinkwik",
   "license": "ISC",
@@ -13,6 +19,7 @@
     "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "husky": "^7.0.2",
     "joi": "^17.4.2",
     "mongoose": "^6.0.6"
   },
